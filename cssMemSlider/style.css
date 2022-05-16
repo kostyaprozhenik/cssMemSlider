@@ -79,6 +79,7 @@ body {
   height: calc(100% + 1px);
   width: 100%;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .captions {
