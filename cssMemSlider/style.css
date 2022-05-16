@@ -1,7 +1,15 @@
+:root {
+    --bg-color: #303335;
+    --text-color: #fff;
+    --bullet-color: #79a9ef;
+    --bullet-hover-color: #fff;
+    --bullet-active-color: #37415a;
+}
+
 body {
   margin: 0;
-  background-color: #25282A;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: Arial, sans-serif;
   font-weight: 500;
 }
@@ -13,8 +21,8 @@ body {
     "slides slides"
     "bullets bullets"
     "captions captions";
-  grid-template-columns: 1fr 154px;
-  column-gap: 24px;
+  grid-template-columns: 1fr 12rem;
+  column-gap: 1.5rem;
   row-gap: 5vh;
   align-items: center;
 }
@@ -22,6 +30,8 @@ body {
 .slides {
   overflow: hidden;
   grid-area: slides;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
 }
 
 .slides-wrapper {
@@ -68,7 +78,6 @@ body {
   object-fit: contain;
   height: calc(100% + 1px);
   width: 100%;
-  border-radius: 10px;
   backdrop-filter: blur(20px);
 }
 
@@ -96,9 +105,10 @@ body {
 
 .bullets a {
   display: block;
-  padding: 5px;
+  padding: 0.5rem;
   border-radius: 50%;
-  color: #7096CD;
+  color: var(--bullet-color);
+  transition: color 0.4s ease-in-out;
 }
 
 .bullets a i {
@@ -115,7 +125,11 @@ body {
 }
 
 .bullets a:hover {
-  color: #fff;
+  color: var(--bullet-hover-color);
+}
+
+.bullets a:active {
+  color: var(--bullet-active-color);
 }
 
 /* bullets */
@@ -198,7 +212,7 @@ body>i:target ~.slider>.bullets>a>i {
     }
 
     .captions-wrapper {
-      grid-template-columns: repeat(7, calc(90vw - 178px));
+      grid-template-columns: repeat(7, calc(90vw - 13.5rem));
     }
 
     .bullets {
@@ -214,21 +228,21 @@ body>i:target ~.slider>.bullets>a>i {
       transform: translateX(0);
     }
     #meme2:target ~ .slider .captions-wrapper {
-      transform: translateX(calc((90vw - 178px) * -1 + 1px));
+      transform: translateX(calc((90vw - 13.5rem) * -1 + 1px));
     }
     #meme3:target ~ .slider .captions-wrapper {
-      transform: translateX(calc((90vw - 178px) * -2 + 1px));
+      transform: translateX(calc((90vw - 13.5rem) * -2 + 1px));
     }
     #meme4:target ~ .slider .captions-wrapper {
-      transform: translateX(calc((90vw - 178px) * -3 + 1px));
+      transform: translateX(calc((90vw - 13.5rem) * -3 + 1px));
     }
     #meme5:target ~ .slider .captions-wrapper {
-      transform: translateX(calc((90vw - 178px) * -4 + 1px));
+      transform: translateX(calc((90vw - 13.5rem) * -4 + 1px));
     }
     #meme6:target ~ .slider .captions-wrapper {
-      transform: translateX(calc((90vw - 178px) * -5 + 1px));
+      transform: translateX(calc((90vw - 13.5rem) * -5 + 1px));
     }
     #meme7:target ~ .slider .captions-wrapper {
-      transform: translateX(calc((90vw - 178px) * -6 + 1px));
+      transform: translateX(calc((90vw - 13.5rem) * -6 + 1px));
     }
 } 
