@@ -5,6 +5,7 @@ body {
   font-family: Arial, sans-serif;
   font-weight: 500;
 }
+
 .slider {
   margin: 5vh 5vw;
   display: grid;
@@ -22,10 +23,12 @@ body {
   overflow: hidden;
   grid-area: slides;
 }
+
 .slides-wrapper {
   display: grid;
   grid-template-columns: repeat(7, 90vw);
 }
+
 .slide {
   height: 70vh;
   display: flex;
@@ -34,12 +37,42 @@ body {
   background-color: black;
 }
 
+.slide:nth-child(1) {
+  background: url('./assets/img/memes-1.jpg') center/cover no-repeat;
+}
+
+.slide:nth-child(2) {
+  background: url('./assets/img/memes-2.jpg') center/cover no-repeat;
+}
+
+.slide:nth-child(3) {
+  background: url('./assets/img/memes-3.jpg') center/cover no-repeat;
+}
+
+.slide:nth-child(4) {
+  background: url('./assets/img/memes-4.jpg') center/cover no-repeat;
+}
+
+.slide:nth-child(5) {
+    background: url('./assets/img/memes-5.jpg') center/cover no-repeat;
+}
+
+.slide:nth-child(6) {
+    background: url('./assets/img/memes-6.jpg') center/cover no-repeat;
+}
+
+.slide:nth-child(7) {
+    background: url('./assets/img/memes-7.jpg') center/cover no-repeat;
+}
+
 .slide img {
   object-fit: contain;
   height: 100%;
   width: 100%;
   border-radius: 10px;
+  backdrop-filter: blur(20px);
 }
+
 .captions {
   grid-area: captions;
   overflow: hidden;
