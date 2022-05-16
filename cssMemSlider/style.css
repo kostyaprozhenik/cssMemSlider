@@ -78,4 +78,22 @@ body {
 
 .bullets a:hover {
   color: #fff;
+}
+
+@media (min-width: 768px) {
+    .slider {
+        grid-template-areas:
+            "slides slides"
+            "captions bullets";
+    }
+
+    .captions-wrapper {
+        grid-template-columns: repeat(7, calc(90vw - 149px));
+    }
+    .bullets {
+        justify-content: flex-end;
+    }
+    .caption {
+        text-align: left;
+    }
 } 
