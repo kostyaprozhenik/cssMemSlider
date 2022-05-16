@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  background-color: #25282A;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+.slider {
+  margin: 5vh 5vw;
+  display: grid;
+  grid-template-areas:
+    "slides slides"
+    "bullets bullets"
+    "captions captions";
+  grid-template-columns: 1fr 125px;
+  column-gap: 24px;
+  row-gap: 5vh;
+  align-items: center;
+}
+
+.slides {
+  overflow: hidden;
+  grid-area: slides;
+}
+.slides-wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 90vw);
+}
+.slide {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.slide img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+.captions {
+  grid-area: captions;
+  overflow: hidden;
+}
+
+.caption {
+  width: 100%;
+  text-align: center;
+}
+.captions-wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, calc(90vw));
+}
+.bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: bullets;
+}
+
+.bullets a {
+  display: block;
+  padding: 5px;
+  border-radius: 50%;
+  color: #7096CD;
+}
+
+.bullets a i {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: currentColor;
+  border: 1px solid currentColor;
+}
+
+.bullets a:hover {
+  color: #fff;
+} 
