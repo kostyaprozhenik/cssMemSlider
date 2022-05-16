@@ -36,6 +36,7 @@ body {
 
 .slides-wrapper {
   display: grid;
+  transition: transform 0.4s ease-in-out;
   grid-template-columns: repeat(7, 90vw);
 }
 
@@ -89,11 +90,11 @@ body {
 
 .caption {
   width: 100%;
-  text-align: center;
 }
 
 .captions-wrapper {
   display: grid;
+  transition: transform 0.4s ease-in-out;
   grid-template-columns: repeat(7, calc(90vw));
 }
 
